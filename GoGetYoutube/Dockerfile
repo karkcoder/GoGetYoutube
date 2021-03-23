@@ -16,8 +16,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["GoGetYoutube/GoGetYoutube.csproj", "GoGetYoutube/"]
-RUN dotnet restore "GoGetYoutube/GoGetYoutube.csproj"
+COPY ["GoGetYoutube.csproj", "GoGetYoutube/"]
+RUN dotnet restore "GoGetYoutube.csproj"
 COPY . .
 WORKDIR "/src/GoGetYoutube"
 RUN dotnet build "GoGetYoutube.csproj" -c Release -o /app/build
