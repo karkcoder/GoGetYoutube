@@ -12,7 +12,7 @@ namespace GoGetYoutube.Controllers
 		private readonly AppSettings _appSettings;
 		private readonly ILogger _logger;
 
-		public HomeController(IOptions<AppSettings> appSettings, ILogger logger)
+		public HomeController(IOptions<AppSettings> appSettings, ILogger<HomeController> logger)
 		{
 			_appSettings = appSettings.Value;
 			_logger = logger;
@@ -23,8 +23,8 @@ namespace GoGetYoutube.Controllers
 		{
 			_logger.LogInformation(YoutubeURL);
 			var youtubedlConfig=  _appSettings.YoutubeDLConfig;
-			//var commander = new Commander();
-			//Task.Run(()=> commander.RunYoutubeDL(YoutubeURL, youtubedlConfig));
+			var commander = new Commander();
+			Task.Run(()=> commander.RunYoutubeDL(YoutubeURL, youtubedlConfig));
 			return Ok(true);
 		}
 	}
