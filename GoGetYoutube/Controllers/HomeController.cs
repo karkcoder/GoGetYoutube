@@ -20,6 +20,11 @@ namespace GoGetYoutube.Controllers
 			_commander = commander;
 		}
 
+		/// <summary>
+		/// Downloads video and saves it to the folder defined in appsetting.json. Please configure YoutubeDLConfig on appsettings.json
+		/// </summary>
+		/// <param name="YoutubeURL">URL of Youtube video</param>
+		/// <returns>Returns true if the process is kicked off</returns>
 		[HttpPost]
 		public IActionResult GetVideo(string YoutubeURL)
 		{
