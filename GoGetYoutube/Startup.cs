@@ -19,6 +19,7 @@ namespace GoGetYoutube
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+			services.AddScoped<ICommander, Commander>();
 
 			services.AddControllers();
 			services.AddSwaggerGen();

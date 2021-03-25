@@ -11,20 +11,21 @@ namespace GoGetYoutube.Controllers
 	{
 		private readonly AppSettings _appSettings;
 		private readonly ILogger _logger;
+		private readonly ICommander _commander;
 
-		public HomeController(IOptions<AppSettings> appSettings, ILogger<HomeController> logger)
+		public HomeController(IOptions<AppSettings> appSettings, ILogger<HomeController> logger, ICommander commander)
 		{
 			_appSettings = appSettings.Value;
 			_logger = logger;
+			_commander = commander;
 		}
 
 		[HttpPost]
 		public IActionResult GetVideo(string YoutubeURL)
 		{
-			_logger.LogInformation(YoutubeURL);
+			_logger.LogInformation("Downloading from " + YoutubeURL);
 			var youtubedlConfig=  _appSettings.YoutubeDLConfig;
-			var commander = new Commander();
-			Task.Run(()=> commander.RunYoutubeDL(YoutubeURL, youtubedlConfig));
+			Task.Run(()=> _commander.RunYoutubeDL(YoutubeURL, youtubedlConfig));
 			return Ok(true);
 		}
 	}
