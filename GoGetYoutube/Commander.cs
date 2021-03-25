@@ -31,7 +31,7 @@ namespace GoGetYoutube
 					_logger.LogInformation(result);
 				}
 			}
-			_logger.LogInformation("Completed downloading " + youtubedlConfig);
+			_logger.LogInformation("Completed downloading " + youtubeUrl);
 		}
 	}
 }
