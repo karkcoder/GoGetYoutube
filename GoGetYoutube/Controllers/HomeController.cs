@@ -31,7 +31,7 @@ namespace GoGetYoutube.Controllers
 			_logger.LogInformation("Downloading from " + YoutubeURL);
 			var youtubedlConfig=  _appSettings.YoutubeDLConfig;
 			Task.Run(()=> _commander.RunYoutubeDL(YoutubeURL, youtubedlConfig));
-			return Ok(true);
+			return Ok("Process started for " + YoutubeURL + " using config " + youtubedlConfig);
 		}
 	}
 }
