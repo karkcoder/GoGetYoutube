@@ -11,7 +11,7 @@ RUN apt install cifs-utils -y
 RUN mkdir /mnt/NAS
 
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
