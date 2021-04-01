@@ -23,14 +23,21 @@ namespace GoGetYoutube
 			start.UseShellExecute = false;
 			start.RedirectStandardOutput = true;
 			_logger.LogInformation("Started downloading " + youtubeUrl);
-			using (Process process = Process.Start(start))
+			try
 			{
-				using (StreamReader reader = process.StandardOutput)
+				using (Process process = Process.Start(start))
 				{
-					string result = reader.ReadToEnd();
-					_logger.LogInformation(result);
+					using (StreamReader reader = process.StandardOutput)
+					{
+						string result = reader.ReadToEnd();
+						_logger.LogInformation(result);
+					}
 				}
 			}
+			catch (Exception ex)
+            {
+				_logger.LogError(ex.Message);
+            }
 			_logger.LogInformation("Completed downloading " + youtubeUrl);
 		}
 	}
