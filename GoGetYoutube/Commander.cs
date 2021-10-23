@@ -17,7 +17,7 @@ namespace GoGetYoutube
 		public void RunYoutubeDL(string youtubeUrl, string youtubedlConfig)
 		{
 			ProcessStartInfo start = new ProcessStartInfo();
-			start.FileName = "youtube-dl";
+			start.FileName = "yt-dlp";
 			start.Arguments = string.Format("{0} {1}", youtubedlConfig, youtubeUrl);
 			_logger.LogInformation("Running " + start.FileName + " with options " + start.Arguments);
 			start.UseShellExecute = false;
