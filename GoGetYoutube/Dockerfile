@@ -4,8 +4,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 RUN apt-get update -y
 RUN apt install python3 -y
 RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-RUN chmod a+rx /usr/local/bin/youtube-dl
+RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+RUN chmod a+rx /usr/local/bin/yt-dlp
 RUN apt install ffmpeg -y
 RUN apt install cifs-utils -y
 RUN mkdir /mnt/NAS
