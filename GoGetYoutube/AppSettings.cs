@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace GoGetYoutube
+﻿namespace GoGetYoutube
 {
-	public class AppSettings
-	{
-		public string YoutubeDLConfig { get; set; }
-	}
+    public class AppSettings
+    {
+        public string SaveLocationConfig { get; set; }
+        public string QualityConfig { get; set; }
+        public string SubTitleConfig { get; set; }
+    }
 }
