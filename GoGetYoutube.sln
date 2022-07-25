@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31025.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoGetYoutube", "GoGetYoutube\GoGetYoutube.csproj", "{3B3FDEEC-C464-489E-BE9E-DB2733E0F05E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{05B916EA-FC94-44DA-9CE7-61FE410336C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{05B916EA-FC94-44DA-9CE7-61FE410336C3}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "GoGetYoutube.App", "GoGetYoutube.App\GoGetYoutube.App.esproj", "{FC14E070-94D9-4023-9FDF-BF09A05ED6C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{05B916EA-FC94-44DA-9CE7-61FE410336C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B916EA-FC94-44DA-9CE7-61FE410336C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B916EA-FC94-44DA-9CE7-61FE410336C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC14E070-94D9-4023-9FDF-BF09A05ED6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC14E070-94D9-4023-9FDF-BF09A05ED6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC14E070-94D9-4023-9FDF-BF09A05ED6C1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FC14E070-94D9-4023-9FDF-BF09A05ED6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC14E070-94D9-4023-9FDF-BF09A05ED6C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC14E070-94D9-4023-9FDF-BF09A05ED6C1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
